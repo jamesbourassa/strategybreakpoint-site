@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Method — Adversarial Synthesis Framework (ASF) | Strategy Breakpoint</title>
+  <meta name="description" content="ASF is a regime & tripwire decision-governance method for deep uncertainty. Define regimes, stress-test adversarially, install tripwires, and govern strategy change before losses compound." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="canonical" href="https://www.strategybreakpoint.com/method.html" />
+
+  <style>
+    :root{
+      --bg:#ffffff; --fg:#0f172a; --muted:#475569; --line:#e2e8f0; --soft:#f8fafc;
+      --brand:#0b1220; --accent:#2563eb;
+      --shadow: 0 10px 30px rgba(2,6,23,.08);
+      --radius: 22px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--fg);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:0 auto;padding:56px 20px}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0 22px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+    .mark{width:30px;height:30px;border-radius:10px;background:linear-gradient(135deg,#0f172a,#1e40af);box-shadow:var(--shadow)}
+    .brand span{font-size:1.05rem}
+    .nav{display:flex;flex-wrap:wrap;gap:14px;justify-content:flex-end}
+    .nav a{color:var(--muted)}
+    .nav a:hover{color:var(--fg);text-decoration:none}
+
+    .hero{border:1px solid var(--line);border-radius:var(--radius);padding:26px;background:linear-gradient(180deg,var(--soft),#fff);box-shadow:var(--shadow)}
+    .kicker{display:inline-flex;align-items:center;gap:8px;font-size:.92rem;color:var(--muted);border:1px solid var(--line);padding:6px 10px;border-radius:999px;background:#fff}
+    .kicker b{color:var(--fg)}
+    h1{margin:14px 0 10px;font-size:2.2rem;line-height:1.12;letter-spacing:-.3px}
+    .lede{margin:0;font-size:1.08rem;color:var(--muted);max-width:80ch}
+
+    .ctaRow{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--fg);box-shadow:0 6px 18px rgba(2,6,23,.06)}
+    .btn:hover{transform:translateY(-1px);text-decoration:none}
+    .btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+    .btn.primary:hover{filter:brightness(1.05)}
+
+    .section{margin-top:32px}
+    .section h2{font-size:1.4rem;margin:0 0 10px}
+    .sub{margin:0;color:var(--muted);max-width:86ch}
+
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:14px}
+    .card{grid-column:span 6;border:1px solid var(--line);border-radius:var(--radius);padding:18px;background:#fff;box-shadow:0 10px 24px rgba(2,6,23,.06)}
+    .card h3{margin:0 0 8px;font-size:1.1rem}
+    .card p{margin:0;color:var(--muted)}
+    .card ul{margin:10px 0 0;padding-left:18px;color:var(--muted)}
+    .card li{margin:6px 0}
+
+    .steps{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:14px}
+    .step{grid-column:span 4;border:1px solid var(--line);border-radius:var(--radius);padding:16px;background:var(--soft)}
+    .step b{display:block;margin-bottom:6px}
+    .step p{margin:0;color:var(--muted)}
+
+    details{border:1px solid var(--line);border-radius:16px;padding:12px 14px;background:#fff;margin:10px 0;box-shadow:0 8px 18px rgba(2,6,23,.05)}
+    summary{cursor:pointer;font-weight:800}
+    details p{margin:10px 0 0;color:var(--muted)}
+    .callout{border:1px solid var(--line);border-radius:var(--radius);padding:16px;background:linear-gradient(180deg,#fff,var(--soft));box-shadow:0 10px 24px rgba(2,6,23,.06)}
+    .callout b{display:block;margin-bottom:6px}
+    .callout p{margin:0;color:var(--muted)}
+    code{background:#f8fafc;border:1px solid var(--line);padding:2px 6px;border-radius:8px}
+
+    footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem;display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}
+    .fineprint{max-width:86ch}
+
+    @media (max-width:980px){
+      h1{font-size:1.95rem}
+      .card{grid-column:span 12}
+      .step{grid-column:span 12}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="mark" aria-hidden="true"></div>
+        <span>Strategy Breakpoint</span>
+      </div>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/method.html">Method</a>
+        <a href="/products.html">Products</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </div>
+
+    <header class="hero">
+      <div class="kicker"><b>ASF</b> Adversarial Synthesis Framework • Regime & Tripwire Governance</div>
+      <h1>ASF is not forecasting. It’s governance for deep uncertainty.</h1>
+      <p class="lede">
+        When strategies depend on assumptions, the main failure mode is not “being wrong”—it’s failing to notice
+        when the assumptions expired. ASF prevents quiet assumption decay by defining mutually exclusive regimes,
+        stress-testing them adversarially, and installing decision-forcing tripwires.
+      </p>
+
+      <div class="ctaRow">
+        <a class="btn primary" href="/products.html">See the offers</a>
+        <a class="btn" href="#how">How it works</a>
+        <a class="btn" href="#boundaries">Governance boundaries</a>
+      </div>
+    </header>
+
+    <section class="section" id="how">
+      <h2>How ASF works</h2>
+      <p class="sub">
+        ASF models a small set of <b>mutually exclusive regime states</b>. Each regime is a rule-set that determines which
+        strategies remain valid. Then ASF defines <b>tripwires</b>—observable thresholds that signal when the rule-set has changed.
+        The objective is not clairvoyance; it’s disciplined uncertainty management: fewer surprise failures, clearer thresholds,
+        and auditable reasoning that can be reviewed, updated, and defended.
+      </p>
+
+      <div class="steps" aria-label="ASF steps">
+        <div class="step">
+          <b>1) Regime definition</b>
+          <p>Define 3–5 regimes as constraint-defined operating environments. Each regime must be mutually exclusive for governance.</p>
+        </div>
+        <div class="step">
+          <b>2) Adversarial stress-testing</b>
+          <p>Attack the strategy: hidden failure modes, irreversibility, tail hazards, cross-impact constraints, and “consensus drift.”</p>
+        </div>
+        <div class="step">
+          <b>3) Tripwire installation</b>
+          <p>Install soft and hard tripwires: signal → threshold → escalation owner → posture change. Make strategy-change actionable.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Regime</h3>
+          <p>
+            A regime is the <b>rule-set</b> that determines which strategies remain valid. It is not a narrative, not a scenario,
+            and not a forecast. It’s the governance container for decision logic.
+          </p>
+          <ul>
+            <li>Each regime defines what is “safe to do” and what becomes dominated/fragile.</li>
+            <li>Misclassification cost is explicit: the most expensive error is identified upfront.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Tripwire</h3>
+          <p>
+            A tripwire is an observable threshold that signals a regime rule has changed.
+            Tripwires are decision-forcing: they trigger escalation and posture changes.
+          </p>
+          <ul>
+            <li><b>Hard tripwires:</b> immediate escalation (stop / unwind / hedge / re-approve).</li>
+            <li><b>Soft tripwires:</b> watchlist and pre-tripwire degradation actions.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="outputs">
+      <h2>What ASF produces</h2>
+      <p class="sub">
+        ASF outputs are designed to be short, board-usable, and auditable. They define what to watch, why it matters, and what changes when the signal triggers.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Regime & Tripwire governance brief</h3>
+          <p>
+            A decision-control artifact: regimes, constraints, misclassification costs, and the tripwire set that forces timely escalation.
+          </p>
+          <ul>
+            <li>Strategy validity map: which actions are admissible per regime</li>
+            <li>Tripwire catalog: signals + thresholds + owners + actions</li>
+            <li>Governance rules: cadence, review triggers, change-control</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Monitoring dashboard layer</h3>
+          <p>
+            A living layer that prevents the brief from decaying: status, pressure, and escalation artifacts that keep governance current.
+          </p>
+          <ul>
+            <li>Tripwire status and time-to-threshold pressure</li>
+            <li>Update cadence and provenance notes</li>
+            <li>Audit trail for changes (why updated, when, by whom)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="boundaries">
+      <h2>Governance boundary language</h2>
+      <p class="sub">
+        Strategy Breakpoint is designed to be deployable in executive and board contexts. That requires clear boundaries:
+        governance, not advice; thresholds, not targets; auditable reasoning, not narrative persuasion.
+      </p>
+
+      <div class="callout" style="margin-top:14px">
+        <b>Boundary in one line</b>
+        <p>
+          ASF provides a decision-governance framework for uncertainty management. It does not provide investment, trading, operational, or legal advice;
+          it does not provide forecasts or guarantees; decision responsibility remains with the client.
+        </p>
+      </div>
+
+      <details>
+        <summary>What we do</summary>
+        <p>
+          Define regimes and constraints; stress-test adversarially; propose tripwires and escalation rules; produce board-grade briefs and
+          monitoring artifacts; document reasoning and change-control so it can be reviewed and defended over time.
+        </p>
+      </details>
+
+      <details>
+        <summary>What we do not do</summary>
+        <p>
+          We do not issue point forecasts, price targets, “calls,” or guarantees. We do not execute trades or operational actions. We do not replace counsel,
+          compliance, or management decision authority.
+        </p>
+      </details>
+    </section>
+
+    <section class="section" id="engagements">
+      <h2>How engagements run</h2>
+      <p class="sub">
+        Engagements are designed to be low-burden and high-governance: short discovery, rapid synthesis, then an operating cadence if you choose monitoring.
+      </p>
+
+      <div class="steps" aria-label="Engagement steps">
+        <div class="step">
+          <b>Phase 0 — Fit & scope (fast)</b>
+          <p>Confirm decision class, irreversibility, time horizon, and governance audience. Define the strategy object and boundary conditions.</p>
+        </div>
+        <div class="step">
+          <b>Phase 1 — Brief build</b>
+          <p>Define regimes; run adversarial synthesis; draft tripwires; align escalation owners and posture changes. Deliver the brief.</p>
+        </div>
+        <div class="step">
+          <b>Phase 2 — Monitoring (optional)</b>
+          <p>Install the dashboard; run monthly or quarterly updates; maintain change-control and audit trail. Escalate when tripwires trigger.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Inputs we typically request</h3>
+          <p>Decision-level materials are enough. ASF is designed to run without needing internal models or proprietary data exhaust.</p>
+          <ul>
+            <li>Strategy memo(s), capex program, major commitments and constraints</li>
+            <li>Key counterparties/contracts and irreversibility points</li>
+            <li>Existing risk/compliance briefs and governance cadence</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>What you get back</h3>
+          <p>Short artifacts meant to gate decisions and force timely escalation.</p>
+          <ul>
+            <li>Regime map + constraint logic</li>
+            <li>Tripwire set with thresholds, owners, and actions</li>
+            <li>Governance rules: cadence, re-approval triggers, change-control</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="fineprint">
+        <b>Scope boundary:</b> Strategy Breakpoint / ASF provides a decision-governance framework for uncertainty management.
+        It is not investment, trading, operational, or legal advice; it does not provide forecasts or guarantees.
+        Decision responsibility remains with the client.
+      </div>
+      <div>© <span id="y"></span> Strategy Breakpoint</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
