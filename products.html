@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Products — Regime & Tripwire Brief + Monitoring Dashboard | Strategy Breakpoint</title>
+  <meta name="description" content="Two ways to buy Strategy Breakpoint: the ASF Regime & Tripwire Brief and the ASF Monitoring Dashboard. Inputs/outputs, retainer menu, and buyer-fit filter." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="canonical" href="https://www.strategybreakpoint.com/products.html" />
+
+  <style>
+    :root{
+      --bg:#ffffff; --fg:#0f172a; --muted:#475569; --line:#e2e8f0; --soft:#f8fafc;
+      --brand:#0b1220; --accent:#2563eb;
+      --shadow: 0 10px 30px rgba(2,6,23,.08);
+      --radius: 22px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--fg);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:0 auto;padding:56px 20px}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0 22px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+    .mark{width:30px;height:30px;border-radius:10px;background:linear-gradient(135deg,#0f172a,#1e40af);box-shadow:var(--shadow)}
+    .brand span{font-size:1.05rem}
+    .nav{display:flex;flex-wrap:wrap;gap:14px;justify-content:flex-end}
+    .nav a{color:var(--muted)}
+    .nav a:hover{color:var(--fg);text-decoration:none}
+
+    .hero{border:1px solid var(--line);border-radius:var(--radius);padding:26px;background:linear-gradient(180deg,var(--soft),#fff);box-shadow:var(--shadow)}
+    .kicker{display:inline-flex;align-items:center;gap:8px;font-size:.92rem;color:var(--muted);border:1px solid var(--line);padding:6px 10px;border-radius:999px;background:#fff}
+    .kicker b{color:var(--fg)}
+    h1{margin:14px 0 10px;font-size:2.2rem;line-height:1.12;letter-spacing:-.3px}
+    .lede{margin:0;font-size:1.08rem;color:var(--muted);max-width:86ch}
+
+    .ctaRow{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--fg);box-shadow:0 6px 18px rgba(2,6,23,.06)}
+    .btn:hover{transform:translateY(-1px);text-decoration:none}
+    .btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+    .btn.primary:hover{filter:brightness(1.05)}
+    code{background:#f8fafc;border:1px solid var(--line);padding:2px 6px;border-radius:8px}
+
+    .section{margin-top:32px}
+    .section h2{font-size:1.4rem;margin:0 0 10px}
+    .sub{margin:0;color:var(--muted);max-width:86ch}
+
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:14px}
+    .card{grid-column:span 6;border:1px solid var(--line);border-radius:var(--radius);padding:18px;background:#fff;box-shadow:0 10px 24px rgba(2,6,23,.06)}
+    .card h3{margin:0 0 8px;font-size:1.1rem}
+    .card p{margin:0;color:var(--muted)}
+    .card ul{margin:10px 0 0;padding-left:18px;color:var(--muted)}
+    .card li{margin:6px 0}
+
+    .product{grid-column:span 12;border:1px solid var(--line);border-radius:var(--radius);padding:18px;background:#fff;box-shadow:var(--shadow)}
+    .productHead{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start}
+    .product h3{margin:0 0 6px;font-size:1.2rem}
+    .product p{margin:0;color:var(--muted)}
+    .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .tag{font-size:.88rem;padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:var(--soft);color:var(--fg)}
+
+    .table{grid-column:span 12;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;box-shadow:0 10px 24px rgba(2,6,23,.06)}
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+    th{background:var(--soft);text-align:left;font-size:.95rem}
+    td{color:var(--muted)}
+    tr:last-child td{border-bottom:none}
+
+    details{grid-column:span 12;border:1px solid var(--line);border-radius:16px;padding:12px 14px;background:#fff;margin:10px 0;box-shadow:0 8px 18px rgba(2,6,23,.05)}
+    summary{cursor:pointer;font-weight:800}
+    details p{margin:10px 0 0;color:var(--muted)}
+    .callout{grid-column:span 12;border:1px solid var(--line);border-radius:var(--radius);padding:16px;background:linear-gradient(180deg,#fff,var(--soft));box-shadow:0 10px 24px rgba(2,6,23,.06)}
+    .callout b{display:block;margin-bottom:6px}
+    .callout p{margin:0;color:var(--muted)}
+    .note{margin-top:10px;color:var(--muted);font-size:.95rem}
+
+    footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem;display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}
+    .fineprint{max-width:86ch}
+
+    @media (max-width:980px){
+      h1{font-size:1.95rem}
+      .card{grid-column:span 12}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="mark" aria-hidden="true"></div>
+        <span>Strategy Breakpoint</span>
+      </div>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/method.html">Method</a>
+        <a href="/products.html">Products</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </div>
+
+    <header class="hero">
+      <div class="kicker"><b>Buy</b> Board-grade governance artifacts • Not forecasts</div>
+      <h1>Two offers: a governance brief, then a monitoring layer.</h1>
+      <p class="lede">
+        ASF is designed for executives and boards making long-dated, irreversible commitments—especially in capex-heavy environments.
+        Start with the Regime & Tripwire Brief. Add the Monitoring Dashboard to keep governance current as the world changes.
+      </p>
+
+      <div class="ctaRow">
+        <a class="btn primary" href="#brief">Regime & Tripwire Brief</a>
+        <a class="btn" href="#dashboard">Monitoring Dashboard</a>
+        <a class="btn" href="#fit">Buyer-fit filter</a>
+      </div>
+    </header>
+
+    <section class="section" id="brief">
+      <h2>Product 1: ASF Regime & Tripwire Brief</h2>
+      <p class="sub">
+        A short, board-ready decision-control artifact that defines the regimes your strategy depends on, the misclassification costs,
+        and the tripwires that force timely escalation—so expired assumptions cannot hide.
+      </p>
+
+      <article class="product">
+        <div class="productHead">
+          <div>
+            <h3>What you receive</h3>
+            <p>Designed to gate decisions and remove ambiguity about “when we change strategy.”</p>
+          </div>
+        </div>
+        <div class="meta" aria-label="Brief tags">
+          <span class="tag">Mutually exclusive regimes</span>
+          <span class="tag">Constraints-first</span>
+          <span class="tag">Misclassification cost explicit</span>
+          <span class="tag">Hard vs soft tripwires</span>
+          <span class="tag">Escalation owners named</span>
+          <span class="tag">Audit-ready reasoning</span>
+        </div>
+
+        <div class="grid" style="margin-top:14px">
+          <div class="card">
+            <h3>Inputs (what we request)</h3>
+            <p>Decision-level materials are sufficient. ASF is designed to avoid heavy integration.</p>
+            <ul>
+              <li>Strategy memo(s) and the commitments it implies</li>
+              <li>Capex posture and irreversibility points</li>
+              <li>Major constraints: financing, contracts, counterparties, regulatory exposure</li>
+              <li>Existing governance cadence and decision owners</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Outputs (what you can use immediately)</h3>
+            <p>Short artifacts that can be circulated, reviewed, and defended.</p>
+            <ul>
+              <li>Regime map: rules that determine strategy validity</li>
+              <li>Tripwire catalog: signals + thresholds + actions</li>
+              <li>Escalation protocol: owners, timing, re-approval triggers</li>
+              <li>Change-control logic: how updates happen without politics</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="dashboard">
+      <h2>Product 2: Strategy Breakpoint Monitoring Dashboard</h2>
+      <p class="sub">
+        A living layer that tracks tripwire status, regime pressure, and escalation artifacts—so the brief doesn’t decay.
+        The goal is to detect drift early and force escalation before compounding losses lock in.
+      </p>
+
+      <article class="product">
+        <div class="productHead">
+          <div>
+            <h3>What you receive</h3>
+            <p>Ongoing governance: a managed cadence, a watchlist, and a standing decision threshold map.</p>
+          </div>
+        </div>
+        <div class="meta" aria-label="Dashboard tags">
+          <span class="tag">Tripwire watchlist</span>
+          <span class="tag">Regime pressure score</span>
+          <span class="tag">Update cadence</span>
+          <span class="tag">Audit trail</span>
+          <span class="tag">Escalation log</span>
+        </div>
+
+        <div class="grid" style="margin-top:14px">
+          <div class="card">
+            <h3>Monitoring cadence options</h3>
+            <p>Choose the cadence that matches decision speed and irreversibility.</p>
+            <ul>
+              <li>Monthly: fast-changing exposure, high optionality cost</li>
+              <li>Quarterly: board cadence, slower-moving commitments</li>
+              <li>Event-driven: updates upon predefined trigger events</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>What changes over time</h3>
+            <p>Tripwires and regimes are stable structures; indicators and thresholds evolve as evidence changes.</p>
+            <ul>
+              <li>Indicator calibration and threshold refinement</li>
+              <li>Constraint updates (cross-impacts, hazard shifts)</li>
+              <li>Documented revisions with “why” and “what changes” notes</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="retainer">
+      <h2>Retainer menu</h2>
+      <p class="sub">
+        The dashboard is typically purchased as a retainer. Pick a governance intensity that matches the decision exposure.
+        (You can edit these names later; the structure is what matters.)
+      </p>
+
+      <div class="table" role="region" aria-label="Retainer tiers">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:20%">Tier</th>
+              <th style="width:25%">Best for</th>
+              <th style="width:30%">Included</th>
+              <th style="width:25%">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Governance Light</b></td>
+              <td>Board cadence monitoring</td>
+              <td>Quarterly update + tripwire status + short escalation note</td>
+              <td>Designed to keep the brief current with minimal burden</td>
+            </tr>
+            <tr>
+              <td><b>Governance Standard</b></td>
+              <td>Active capex + long-dated commitments</td>
+              <td>Monthly watchlist + regime pressure score + threshold calibration</td>
+              <td>Best default for energy and capex-heavy boards</td>
+            </tr>
+            <tr>
+              <td><b>Governance Intensive</b></td>
+              <td>High volatility, high irreversibility</td>
+              <td>Monthly + event-driven updates + escalation rehearsals</td>
+              <td>For environments where “late” is catastrophic</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note">
+        Pricing is intentionally not posted publicly. Your buyer is a governance function; pricing follows scope, cadence, and decision exposure.
+      </div>
+    </section>
+
+    <section class="section" id="fit">
+      <h2>Buyer-fit filter</h2>
+      <p class="sub">
+        Strategy Breakpoint works best when governance is the bottleneck. This filter prevents mismatch and preserves credibility.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Strong fit</h3>
+          <ul>
+            <li>Long-dated, irreversible commitments (capex, contracts, financing)</li>
+            <li>Multiple stakeholders: board/committee/executive alignment required</li>
+            <li>High tail-risk or cross-impact complexity</li>
+            <li>History of “assumption drift” and late recognition</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Not a fit</h3>
+          <ul>
+            <li>You want point forecasts, targets, or “calls”</li>
+            <li>There is no governance forum to act on tripwires</li>
+            <li>Decisions are reversible and low consequence</li>
+            <li>You want a persuasion narrative rather than thresholds</li>
+          </ul>
+        </div>
+      </div>
+
+      <details>
+        <summary>Quick self-check: are we buying governance or prediction?</summary>
+        <p>
+          If your question is “What will happen?” you’re seeking prediction. If your question is “What would make our strategy unsafe,
+          and how do we detect it in time?” you’re seeking governance. ASF is built for the second question.
+        </p>
+      </details>
+
+      <details>
+        <summary>Where this is commonly deployed</summary>
+        <p>
+          Corporate boards and strategy committees; energy & natural resources portfolios (oil-weighted, LNG-heavy, or power-centric);
+          sovereign wealth funds and large asset owners overseeing long-horizon exposures.
+        </p>
+      </details>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Request an intro</h2>
+      <p class="sub">
+        If you’re governing long-dated commitments and want disciplined breakpoint detection, reach out. We’ll confirm fit fast.
+      </p>
+
+      <div class="ctaRow" style="margin-top:14px">
+        <a class="btn primary" href="mailto:contact@strategybreakpoint.com?subject=ASF%20intro%20request">Email Strategy Breakpoint</a>
+        <a class="btn" href="/method.html">Review the method</a>
+      </div>
+
+      <p class="note">
+        Replace <code>contact@strategybreakpoint.com</code> with your preferred inbox once configured.
+      </p>
+    </section>
+
+    <footer>
+      <div class="fineprint">
+        <b>Scope boundary:</b> Strategy Breakpoint / ASF provides a decision-governance framework for uncertainty management.
+        It is not investment, trading, operational, or legal advice; it does not provide forecasts or guarantees.
+        Decision responsibility remains with the client.
+      </div>
+      <div>© <span id="y"></span> Strategy Breakpoint</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
